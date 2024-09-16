@@ -1,7 +1,7 @@
 // No Funcional - Imperativo Steps
 
-var name = "Roc";
-var greeting = "Hi, I'm ";
+let name = "Roc";
+let greeting = "Hi, I'm ";
 console.log ( greeting + name );
 
 
@@ -53,9 +53,9 @@ const nuevaPersona = { ...persona, edad: 26 };
 console.log(nuevaPersona);  
 
 
-var rooms = ["H1", "H2", "H3"];
+const rooms = ["H1", "H2", "H3"];
 
-var newRooms = rooms.map ( 
+const newRooms = rooms.map ( 
 	function ( room ) {
 		if (room == "H3") {
 			return "H4" 
