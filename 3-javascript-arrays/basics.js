@@ -15,6 +15,6 @@ const numbersArray3 = [...numbersArray.slice(0, 2)]
 const index = numbersArray.indexOf(50);
 const numbersArray4 = [...numbersArray.slice(0, index), 40, ...numbersArray.slice(index)]
 
-// ~ slice
+// destructuring
 const numbersArray5 = [1, 2, 3];
 const [x, ...result] = numbersArray5;

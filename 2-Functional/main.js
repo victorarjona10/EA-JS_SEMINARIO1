@@ -13,8 +13,8 @@ function greet ( name ) {
 
 console.log ( greet( "Roc" ) );
 
-// Funcion pura
 
+// Funcion pura
 function sumar (a, b) {
 	return a + b;
 }
@@ -22,18 +22,19 @@ function sumar (a, b) {
 
 // Side Effects
 
-name = "Roc";
-
-function greet2 ( ) {
-	name = "Hacker";
-	console.log ( "Hi, I'm " + name );
+let counter = 0;
+	
+function incrementCounter() { // Función con side effect: modifica una variable global
+  counter += 1; 
+  return counter;
 }
 
-greet2();
+console.log(incrementCounter()); 
+console.log(incrementCounter()); 
+console.log(counter);    
 
 
 // Higher Order Functions
-
 function aplicarOperacion (a, b, operacion) {
 	return operacion(a, b);
 }
@@ -45,7 +46,6 @@ function multiplicar (a, b) {
 console.log(aplicarOperacion(3, 4, multiplicar));  
 
 
-
 // No Mutation
 
 const persona = { nombre: 'Juan', edad: 25 };
@@ -53,19 +53,6 @@ const nuevaPersona = { ...persona, edad: 26 };
 console.log(nuevaPersona);  
 
 
-const rooms = ["H1", "H2", "H3"];
 
-const newRooms = rooms.map ( 
-	function ( room ) {
-		if (room == "H3") {
-			return "H4" 
-		} else {
-			return room;
-		}
-	}
-);
-
-console.log ( rooms );
-console.log ( newRooms );
 
 
