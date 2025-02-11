@@ -1,7 +1,29 @@
-console.log("Hello") // Call Stack
+// Call Stack 
 
-setTimeout(() => console.log("Time"), 0) // Task Queue
+function first() {
+    console.log("First");
+}
+  
+// Task Queue - MacroTask Queue
+function second() {
+    setTimeout(() => { 
+        console.log("Second")
+    }, 0); 
+}
 
-Promise.resolve().then(() => console.log("Promise")) // MicroTask Queue
+// Job Queue - MicroTask Queue
+function third() {
+    Promise.resolve().then(() => {
+        console.log("Third")
+    }) 
+}
 
-console.log("World") // Call Stack
+forth = () => {
+    console.log("Forth")
+}
+
+first(); // call stack
+second(); // macrotask queue
+third(); // microtask queue
+forth(); // call stack
+

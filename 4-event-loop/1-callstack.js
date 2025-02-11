@@ -1,9 +1,13 @@
-function square(num) {
-  return num * num;
+// Call Stack 
+
+function first() {
+  console.log("First");
 }
 
-function logSquare(num) {
-  console.log(square(num));
+function second() {
+  console.log("Second");
 }
 
-logSquare(2);
+first(); // call stack
+second(); // call stack
+
