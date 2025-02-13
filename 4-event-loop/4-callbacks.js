@@ -1,23 +1,21 @@
-console.log('Inicio del proceso');
 
-// Simulamos una serie de operaciones asíncronas usando callbacks
-setTimeout(() => {
-  console.log('Operación 1 completada');
+console.log("Inicio");
 
+// Función asíncrona simulada con setTimeout 
+// Como si fuera una consulta a una BD
+function getUserData(id, callback) {
   setTimeout(() => {
-    console.log('Operación 2 completada');
+    console.log(`Datos obtenidos para el usuario ${id}`);
+    callback({ id, name: "Alice", age: 25 });
+  }, 2000);
+}
 
-    setTimeout(() => {
-      console.log('Operación 3 completada');
+// Callback que maneja los datos recibidos
+function processUserData(user) {
+  console.log(`Procesando usuario: ${user.name}, edad: ${user.age}`);
+}
 
-      setTimeout(() => {
-        console.log('Operación 4 completada');
-        
-        // Aquí podría haber otra llamada más anidada y así sucesivamente...
-      }, 1000);  // Simulamos que la operación toma 1 segundo
+// Llamamos a la función asíncrona
+getUserData(1, processUserData);
 
-    }, 1000);  // Simulamos que la operación toma 1 segundo
-
-  }, 1000);  // Simulamos que la operación toma 1 segundo
-
-}, 1000);  // Simulamos que la operación toma 1 segundo
+console.log("Fin");
