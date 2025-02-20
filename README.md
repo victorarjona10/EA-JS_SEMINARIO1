@@ -42,3 +42,6 @@ Ejecutar JS
 ```
 node main.js
 ```
+
+
+Mis fuentes usadas han sido basicamente copilot donde le he pedido que me explique cada funcion que hacia explicitamente. .map , .sort, .reduce etc etc, y que me explicase el codigo. Esta ha sido la unica fuente que he usado
